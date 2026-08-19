@@ -174,12 +174,20 @@ details p{margin-top:14px;color:var(--ink-soft);font-size:1rem;max-width:680px}
 .final p{max-width:600px;margin:0 auto 32px;font-size:1.1rem;color:var(--ink)}
 
 /* FOOTER */
-footer{background:var(--marsala-dark);color:rgba(245,241,234,.6);padding:48px 0 36px;font-size:.82rem}
-footer .wrap{display:grid;gap:18px}
-footer .logo{color:var(--champagne)}
-footer .disclaimer{max-width:820px;line-height:1.7}
-footer a:hover{color:var(--champagne)}
-footer .links{display:flex;gap:22px;flex-wrap:wrap}
+footer{background:var(--marsala-dark);color:var(--marfim);padding:72px 0 32px}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:48px}
+.foot .logo{font-size:1.25rem;color:var(--champagne)}
+.foot .brand-sub{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dourado-soft);margin-top:6px}
+.foot p{color:rgba(245,241,234,.7);font-size:.88rem;max-width:340px;margin-top:16px;line-height:1.7}
+.foot h4{font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,241,234,.5);margin-bottom:16px;font-weight:500}
+.foot ul{list-style:none;display:grid;gap:10px}
+.foot ul a{font-size:.9rem;color:rgba(245,241,234,.82);transition:.2s}
+.foot ul a:hover{color:var(--champagne)}
+.foot .disclaimer{font-size:.78rem;color:rgba(245,241,234,.55);line-height:1.65;margin-top:0;max-width:none}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(245,241,234,.12);font-size:.78rem;color:rgba(245,241,234,.5)}
+.foot-bottom .tag{letter-spacing:.14em;text-transform:uppercase;font-size:.7rem;color:var(--dourado-soft)}
+@media (max-width:900px){.foot{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot{grid-template-columns:1fr;gap:30px}}
 
 /* STICKY MOBILE CTA */
 .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--marfim);padding:12px 16px;box-shadow:0 -8px 30px rgba(43,29,31,.18)}
@@ -227,7 +235,7 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap}
       <h1>Envelhecer bem não é sorte. <em>É construção.</em></h1>
       <p class="lead">O que a ciência descobriu sobre envelhecer com saúde, beleza e vitalidade. O guia da mulher moderna para proteger seu cérebro, seus hormônios, sua saúde e sua beleza ao longo da vida.</p>
       <ul>
-        <li>Por que o corpo muda depois dos 35 e o que realmente está por trás disso</li>
+        <li>Por que o corpo muda depois dos 40 e o que realmente está por trás disso</li>
         <li>Perimenopausa, menopausa, insulina, inflamação e intestino, explicados em linguagem de gente</li>
         <li>Um plano prático: exames que toda mulher deveria conhecer e suplementação com evidência</li>
       </ul>
@@ -242,7 +250,6 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap}
       </div>
     </div>
     <div class="cover">
-      <span class="badge">17 capítulos</span>
       <img src="img/capa.jpg" alt="Capa do e-book O Código da Longevidade Feminina">
     </div>
   </div>
@@ -293,7 +300,7 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap}
     <div class="stats">
       <div class="stat"><b>17</b><span>capítulos</span></div>
       <div class="stat"><b>6</b><span>partes</span></div>
-      <div class="stat"><b>35+</b><span>pensado para você</span></div>
+      <div class="stat"><b>40+</b><span>pensado para você</span></div>
       <div class="stat"><b>PDF</b><span>acesso imediato</span></div>
     </div>
   </div>
@@ -328,7 +335,7 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap}
       <div class="pq sim">
         <h3>Faz sentido para você</h3>
         <ul>
-          <li>Tem 35 anos ou mais e começou a sentir que o corpo mudou</li>
+          <li>Tem 40 anos ou mais e começou a sentir que o corpo mudou</li>
           <li>Quer envelhecer com beleza, energia e autonomia, de forma natural</li>
           <li>Está cansada de informação contraditória e quer entender a ciência sem enrolação</li>
           <li>Prefere construir saúde de dentro para fora em vez de correr atrás de procedimento</li>
@@ -399,7 +406,7 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap}
 </section>
 
 <!-- FAQ -->
-<section class="faq">
+<section class="faq" id="faq">
   <div class="wrap">
     <div class="sec-head center">
       <p class="eyebrow">Dúvidas frequentes</p>
@@ -407,7 +414,7 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap}
     </div>
     <div class="faq-list">
       <details><summary>Como recebo o e-book?</summary><p>Assim que o pagamento é confirmado, você recebe um e-mail da Hotmart com o acesso ao arquivo em PDF. Pode ler no celular, tablet ou computador, e baixar para ler offline.</p></details>
-      <details><summary>Eu ainda não tenho 35 anos. Faz sentido para mim?</summary><p>Sim. A mulher que você será aos 70 está sendo construída hoje. Quanto antes você entende os mecanismos do envelhecimento, mais tempo tem para agir a favor do seu corpo.</p></details>
+      <details><summary>Eu ainda não tenho 40 anos. Faz sentido para mim?</summary><p>Sim. A mulher que você será aos 70 está sendo construída hoje. Quanto antes você entende os mecanismos do envelhecimento, mais tempo tem para agir a favor do seu corpo.</p></details>
       <details><summary>Já passei da menopausa. Ainda dá tempo?</summary><p>Dá. Vários capítulos falam exatamente sobre o que muda depois da menopausa e sobre músculo, metabolismo, cérebro e ossos, que continuam respondendo às suas escolhas em qualquer fase.</p></details>
       <details><summary>O e-book substitui consulta médica?</summary><p>Não. O conteúdo é educativo e baseado em evidências, escrito para você entender o seu corpo e chegar à consulta com as perguntas certas. Dose, prescrição e conduta são sempre individuais e cabem ao seu médico.</p></details>
       <details><summary>Tem linguagem muito técnica?</summary><p>Não. Os termos científicos aparecem sempre com a tradução imediata para a vida real. A ideia é que você termine cada capítulo entendendo o que acontece no seu corpo, não decorando nomes.</p></details>
@@ -428,13 +435,20 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap}
 
 <footer>
   <div class="wrap">
-    <div class="logo">O Código da <span>Longevidade</span> Feminina</div>
-    <p class="disclaimer"><strong>Nota importante.</strong> Este e-book tem finalidade educativa e não substitui consulta, diagnóstico ou tratamento médico individualizado. Alterações hormonais, metabólicas, cognitivas ou nutricionais devem ser avaliadas por profissional habilitado, considerando história clínica, exames, riscos, sintomas e fase de vida da mulher. Os resultados variam de pessoa para pessoa.</p>
-    <div class="links">
-      <a href="https://www.dainaschneiderkrindges.com.br" target="_blank" rel="noopener">dainaschneiderkrindges.com.br</a>
-      <a href="https://www.instagram.com/dainakrindges" target="_blank" rel="noopener">Instagram</a>
+    <div class="foot">
+      <div>
+        <a href="#" class="logo">O Código da <span>Longevidade</span> Feminina</a>
+        <span class="brand-sub">E-book · Daína Schneider Krindges</span>
+        <p>O que a ciência descobriu sobre envelhecer com saúde, beleza e vitalidade. Conteúdo educativo, baseado em evidências, para a mulher que quer construir a própria longevidade.</p>
+      </div>
+      <div><h4>Navegação</h4><ul><li><a href="#reconhece">Você se reconhece?</a></li><li><a href="#conteudo">O que tem dentro</a></li><li><a href="#sobre">Quem escreveu</a></li><li><a href="#oferta">Garantir o e-book</a></li><li><a href="#faq">Dúvidas frequentes</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a href="https://www.instagram.com/dainakrindges" target="_blank" rel="noopener">@dainakrindges</a></li><li><a href="https://www.dainaschneiderkrindges.com.br" target="_blank" rel="noopener">dainaschneiderkrindges.com.br</a></li><li><a href="#oferta">Suporte via Hotmart</a></li></ul></div>
+      <div><h4>Nota importante</h4><p class="disclaimer">Este e-book tem finalidade educativa e não substitui consulta, diagnóstico ou tratamento médico individualizado. Alterações hormonais, metabólicas, cognitivas ou nutricionais devem ser avaliadas por profissional habilitado. Os resultados variam de pessoa para pessoa.</p></div>
     </div>
-    <p>© <span id="ano"></span> Daína Schneider Krindges. Todos os direitos reservados.</p>
+    <div class="foot-bottom">
+      <span>© <span id="ano"></span> Daína Schneider Krindges. Todos os direitos reservados.</span>
+      <span class="tag">Ciência · Longevidade · Beleza</span>
+    </div>
   </div>
 </footer>
 
