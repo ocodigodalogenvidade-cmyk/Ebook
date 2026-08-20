@@ -66,7 +66,9 @@ nav .btn{padding:11px 22px;font-size:.88rem}
 /* HERO */
 .hero{background:linear-gradient(160deg,var(--marsala-dark) 0%,var(--marsala) 55%,#6B2530 100%);color:var(--marfim);padding:80px 0 100px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 75% 40%,rgba(233,217,198,.10),transparent 55%);pointer-events:none}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;grid-template-areas:"head cover" "body cover";gap:0 64px;align-content:center;align-items:center;position:relative}
+.hero-head{grid-area:head;align-self:end}
+.hero-body{grid-area:body;align-self:start}
 .hero h1{font-size:clamp(2.4rem,4.6vw,3.9rem);font-weight:500;margin-bottom:22px}
 .hero h1 em{font-style:italic;color:var(--champagne)}
 .hero .lead{font-size:1.15rem;color:rgba(245,241,234,.86);max-width:540px;margin-bottom:28px;font-weight:300}
@@ -75,7 +77,7 @@ nav .btn{padding:11px 22px;font-size:.88rem}
 .hero li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--dourado-soft);margin-top:10px;flex-shrink:0}
 .hero .btn-primary{background:var(--champagne);color:var(--marsala);box-shadow:0 14px 34px rgba(0,0,0,.25)}
 .hero .btn-primary:hover{background:var(--white)}
-.cover{position:relative;justify-self:center}
+.cover{grid-area:cover;position:relative;justify-self:center}
 .cover img{width:min(360px,80vw);border-radius:6px;box-shadow:0 40px 80px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.06);transform:rotate(-3deg)}
 .cover::after{content:"";position:absolute;inset:auto 10% -30px 10%;height:40px;background:radial-gradient(ellipse,rgba(0,0,0,.45),transparent 70%);z-index:-1}
 .badge{position:absolute;top:-18px;right:-18px;background:var(--dourado);color:var(--white);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:12px 16px;border-radius:999px;font-weight:500;box-shadow:0 10px 24px rgba(0,0,0,.3)}
@@ -210,8 +212,15 @@ footer{background:var(--marsala-dark);color:var(--marfim);padding:72px 0 32px}
 @media (max-width:900px){
   section{padding:72px 0}
   .hero{padding:56px 0 72px}
-  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:48px}
-  .cover{order:-1}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);grid-template-areas:"head" "cover" "body";gap:36px}
+  .hero-head{text-align:center;align-self:auto}
+  .hero-head .eyebrow{display:inline-block;border:1px solid rgba(233,217,198,.4);border-radius:999px;padding:8px 18px;margin-bottom:20px}
+  .hero-head h1{margin-bottom:0}
+  .hero-body{align-self:auto;text-align:center}
+  .hero-body .lead{margin-left:auto;margin-right:auto}
+  .hero-body ul{text-align:left;max-width:440px;margin-left:auto;margin-right:auto}
+  .hero-body .btn{width:100%;max-width:440px}
+  .author-line{justify-content:center;text-align:left}
   .cover img{transform:none;width:min(280px,70vw)}
   .dor-grid,.parts,.pq-grid{grid-template-columns:minmax(0,1fr)}
   .pages{display:flex;overflow-x:auto;gap:14px;scroll-snap-type:x mandatory;padding:6px 4px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -286,9 +295,11 @@ footer{background:var(--marsala-dark);color:var(--marfim);padding:72px 0 32px}
 <!-- HERO -->
 <header class="hero">
   <div class="wrap">
-    <div>
+    <div class="hero-head">
       <p class="eyebrow light">E-book · Daína Schneider Krindges</p>
       <h1>Envelhecer bem não é sorte. <em>É construção.</em></h1>
+    </div>
+    <div class="hero-body">
       <p class="lead">O que a ciência descobriu sobre envelhecer com saúde, beleza e vitalidade. O guia da mulher moderna para proteger seu cérebro, seus hormônios, sua saúde e sua beleza ao longo da vida.</p>
       <ul>
         <li>Por que o corpo muda depois dos 40 e o que realmente está por trás disso</li>
